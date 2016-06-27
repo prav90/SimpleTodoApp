@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/taskNameHolder"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="What do you want to do?"
+                android:id="@+id/tvTaskName"
+                android:layout_marginTop="42dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp" />
+
+            <EditText
+                android:lines="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/etTaskName"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:hint="Appointment with Dentist" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/DateHolder"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/taskNameHolder"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="When do you want this done by?"
+                android:id="@+id/tvDueDate"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"/>
+
+            <EditText
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/etDueDate"
+                android:layout_marginLeft="32dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:textStyle="bold"
+            android:id="@+id/timeHolder"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/DateHolder"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="What time?"
+                android:id="@+id/tvTime"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"/>
+
+            <EditText
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:inputType="time"
+                android:ems="10"
+                android:id="@+id/etDueTime" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/priorityHolder"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timeHolder"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="How Important is this task?"
+                android:id="@+id/tvPriority"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"/>
+
+            <Spinner
+                android:entries="@array/priority_array"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="28dp"
+                android:id="@+id/taskPriority" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Task"
+            android:id="@+id/createTaskButton"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_below="@+id/priorityHolder"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/btSave"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:layout_below="@+id/priorityHolder"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/btCancel"
+            android:layout_toRightOf="@+id/btSave"
+            android:layout_toEndOf="@+id/btSave"
+            android:layout_marginTop="20dp"/>
+
+    </RelativeLayout>
+</LinearLayout>

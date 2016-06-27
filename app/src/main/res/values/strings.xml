@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">SimpleTodo</string>
+    <string name="app_name">List-Mate</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>
